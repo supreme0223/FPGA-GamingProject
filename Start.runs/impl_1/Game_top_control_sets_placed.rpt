@@ -1,0 +1,99 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Dec  3 20:20:47 2018
+| Host         : SurfaceBook-Will running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Game_top_control_sets_placed.rpt
+| Design       : Game_top
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    31 |
+| Unused register locations in slices containing registers |   100 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      8 |            6 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |           21 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             156 |           39 |
+| No           | No                    | Yes                    |              72 |           21 |
+| No           | Yes                   | No                     |             204 |           29 |
+| Yes          | No                    | No                     |              38 |            7 |
+| Yes          | No                    | Yes                    |             200 |           43 |
+| Yes          | Yes                   | No                     |             134 |           26 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+----------------------------------------+---------------------------------+------------------+----------------+
+|       Clock Signal       |              Enable Signal             |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++--------------------------+----------------------------------------+---------------------------------+------------------+----------------+
+|  clkwizard/inst/clk_out2 |                                        |                                 |                1 |              2 |
+|  gameOver_reg_i_2_n_0    |                                        |                                 |                1 |              2 |
+|  clkwizard/inst/clk_out2 | game/graph_unit/x_delta_reg[9]_i_1_n_0 | game/graph_unit/AR[0]           |                3 |              8 |
+|  clkwizard/inst/clk_out2 | game/graph_unit/E[0]                   | game/graph_unit/AR[0]           |                1 |              8 |
+|  clkwizard/inst/clk_out2 | game/graph_unit/dig0_reg_reg[3]_0[0]   | game/graph_unit/AR[0]           |                1 |              8 |
+|  clkin_IBUF_BUFG         |                                        | snake0/green_reg[0]             |                2 |              8 |
+|  clkin_IBUF_BUFG         | snake0/but/direction[3]_i_1_n_0        |                                 |                1 |              8 |
+|  hc_reg[9]_i_2_n_0       | snake0/appleY[8]_i_1_n_0               | snake0/appleY[5]_i_1_n_0        |                3 |              8 |
+|  game/text_unit/slowclk  | enPong_IBUF                            | game/graph_unit/AR[0]           |                1 |             12 |
+|  clkwizard/inst/clk_out2 | game/vsync_unit/timer_reg_reg[6][0]    | game/graph_unit/AR[0]           |                3 |             14 |
+|  clkwizard/inst/clk_out2 | game/graph_unit/barr_y_reg[9]_i_1_n_0  | game/graph_unit/AR[0]           |                3 |             18 |
+|  hc_reg[9]_i_2_n_0       |                                        | snake0/ran/j[8]_i_1_n_0         |                3 |             18 |
+|  gameOver_reg_i_2_n_0    | snake0/but/headY_reg[0][0]             | snake0/gameOver1_out            |                3 |             18 |
+|  clkwizard/inst/clk_out2 | game/graph_unit/barl_y_reg[9]_i_1_n_0  | game/graph_unit/AR[0]           |                6 |             20 |
+|  clkwizard/inst/clk_out2 | game/vsync_unit/v_count_reg[9]_i_1_n_0 | game/graph_unit/AR[0]           |                4 |             20 |
+|  clkwizard/inst/clk_out1 | nolabel_line91/U2/vsenable             | nolabel_line91/U2/hc[9]_i_2_n_0 |                3 |             20 |
+|  hc_reg[9]_i_2_n_0       |                                        | snake0/ran/i[9]_i_1_n_0         |                4 |             20 |
+|  hc_reg[9]_i_2_n_0       | snake0/VGA/vsenable                    | snake0/VGA/hc[9]_i_3_n_0        |                6 |             20 |
+|  gameOver_reg_i_2_n_0    | snake0/but/headX_reg[0][0]             | snake0/gameOver1_out            |                4 |             20 |
+|  clkin_IBUF_BUFG         |                                        |                                 |                9 |             24 |
+|  clkwizard/inst/clk_out2 | game/vsync_unit/E[0]                   | game/graph_unit/AR[0]           |                6 |             26 |
+|  clkwizard/inst/clk_out1 |                                        | nolabel_line91/U2/hc[9]_i_2_n_0 |                7 |             26 |
+|  hc_reg[9]_i_2_n_0       |                                        | snake0/VGA/hc[9]_i_3_n_0        |                7 |             26 |
+|  clkwizard/inst/clk_out1 |                                        |                                 |                7 |             30 |
+|  hc_reg[9]_i_2_n_0       | snake0/appleY[8]_i_1_n_0               |                                 |                6 |             30 |
+|  clkwizard/inst/clk_out2 | game/vsync_unit/ball_x_reg_reg[0]_0[0] | game/graph_unit/AR[0]           |                7 |             38 |
+|  clkin_IBUF_BUFG         |                                        | snake0/upd/check[0]_i_1_n_0     |                6 |             48 |
+|  clkin_IBUF_BUFG         |                                        | snake0/divider/a1_carry__2_n_4  |                8 |             64 |
+|  clkwizard/inst/clk_out2 |                                        | game/graph_unit/AR[0]           |               13 |             66 |
+|  gameOver_reg_i_2_n_0    | snake0/but/E[0]                        | snake0/gameOver1_out            |               15 |             76 |
+|  hc_reg[9]_i_2_n_0       |                                        |                                 |               21 |             98 |
++--------------------------+----------------------------------------+---------------------------------+------------------+----------------+
+
+
